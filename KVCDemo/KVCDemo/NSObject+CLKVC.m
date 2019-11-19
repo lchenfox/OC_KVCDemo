@@ -35,6 +35,14 @@
 		[self performSelector:setIsKeySEL withObject:value];
 		return;
 	}
+    
+    // _setKey
+    NSString *_setKey = [NSString stringWithFormat:@"_set%@:", key.capitalizedString];
+    SEL _setKeySEL = NSSelectorFromString(_setKey);
+    if ([self respondsToSelector:_setKeySEL]) {
+        [self performSelector:_setKeySEL withObject:value];
+        return;
+    }
 	
 	// access instance variable method to check. If NO, throw an exception.
 	if (![[self class] accessInstanceVariablesDirectly]) {
@@ -170,14 +178,29 @@
 	if ([self respondsToSelector:keySEL]) {
 		return [self performSelector:keySEL];
 	}
-	
-	// getIsKey
-	NSString *getIsKey = [NSString stringWithFormat:@"getIs%@", key.capitalizedString];
-	SEL getIsKeySEL = NSSelectorFromString(getIsKey);
-	if ([self respondsToSelector:getIsKeySEL]) {
-		return [self performSelector:getIsKeySEL];
-	}
-	
+    
+    // isKey
+    NSString *is_Key = [NSString stringWithFormat:@"is%@", key.capitalizedString];
+    SEL isKeySEL = NSSelectorFromString(is_Key);
+    if ([self respondsToSelector:isKeySEL]) {
+        return [self performSelector:isKeySEL];
+    }
+    
+    // _getKey
+    NSString *_getKey = [NSString stringWithFormat:@"_get%@", key.capitalizedString];
+    SEL _getKeySEL = NSSelectorFromString(_getKey);
+    if ([self respondsToSelector:_getKeySEL]) {
+        return [self performSelector:_getKeySEL];
+    }
+    
+    // _key
+    NSString *underlineKey = [NSString stringWithFormat:@"_%@", key];
+    SEL _keySEL = NSSelectorFromString(underlineKey);
+    if ([self respondsToSelector:_keySEL]) {
+        return [self performSelector:_keySEL];
+    }
+    
+
 	// access instance variable method to check. If NO, throw an exception.
 	if (![[self class] accessInstanceVariablesDirectly]) {
 		NSException *exception = [NSException exceptionWithName:@"CL KVC"
