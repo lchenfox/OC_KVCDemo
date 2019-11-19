@@ -21,10 +21,20 @@
 	}
 	
 	// setKey
+	#pragma clang diagnostic push
+	#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 	NSString *setKey = [NSString stringWithFormat:@"set%@:", key.capitalizedString];
 	SEL setKeySEL = NSSelectorFromString(setKey);
 	if ([self respondsToSelector:setKeySEL]) {
 		[self performSelector:setKeySEL withObject:value];
+		return;
+	}
+	
+	// _setKey
+	NSString *_setKey = [NSString stringWithFormat:@"_set%@:", key.capitalizedString];
+	SEL _setKeySEL = NSSelectorFromString(_setKey);
+	if ([self respondsToSelector:_setKeySEL]) {
+		[self performSelector:_setKeySEL withObject:value];
 		return;
 	}
 	
@@ -35,6 +45,7 @@
 		[self performSelector:setIsKeySEL withObject:value];
 		return;
 	}
+	#pragma clang diagnostic pop
 	
 	// access instance variable method to check. If NO, throw an exception.
 	if (![[self class] accessInstanceVariablesDirectly]) {
@@ -159,6 +170,8 @@
 	}
 	
 	// getKey
+	#pragma clang diagnostic push
+	#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 	NSString *getKey = [NSString stringWithFormat:@"get%@", key.capitalizedString];
 	SEL getKeySEL = NSSelectorFromString(getKey);
 	if ([self respondsToSelector:getKeySEL]) {
@@ -177,6 +190,7 @@
 	if ([self respondsToSelector:getIsKeySEL]) {
 		return [self performSelector:getIsKeySEL];
 	}
+	#pragma clang diagnostic pop
 	
 	// access instance variable method to check. If NO, throw an exception.
 	if (![[self class] accessInstanceVariablesDirectly]) {
