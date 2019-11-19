@@ -2,7 +2,7 @@
 //  ViewController.m
 //  KVCDemo
 //
-//  Created by chenlong on 2019/11/18.
+//  Created by langke on 2019/11/19.
 //  Copyright © 2019 langke. All rights reserved.
 //
 
@@ -16,20 +16,25 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 	[super viewDidLoad];
+	[self.navigationController.navigationBar setTranslucent:NO];
+	[self.view setBackgroundColor:[UIColor yellowColor]];
 	[self triggerKVC];
 }
 
 - (void)triggerKVC
 {
+	static NSString *ageKey = @"age";
 	Person *person = [[Person alloc] init];
-	[person cl_setValue:@89.88 forKey:@"age"];
-	id age = [person cl_valueForKey:@"age"];
+	[person cl_setValue:@89.88 forKey:ageKey];
+	id age = [person cl_valueForKey:ageKey];
 	NSLog(@"age: %@", age);
 	
-	[person cl_setValue:@"langke" forKey:@"name"];
-	id name = [person cl_valueForKey:@"name"];
+	static NSString *nameKey = @"name";
+	[person cl_setValue:@"langke" forKey:nameKey];
+	id name = [person cl_valueForKey:nameKey];
 	NSLog(@"name: %@", name);
 }
 

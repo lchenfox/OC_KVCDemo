@@ -7,38 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ABD505BB2382D01500DFC32C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD505BA2382D01500DFC32C /* AppDelegate.m */; };
-		ABD505BE2382D01500DFC32C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD505BD2382D01500DFC32C /* SceneDelegate.m */; };
-		ABD505C12382D01500DFC32C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD505C02382D01500DFC32C /* ViewController.m */; };
-		ABD505C42382D01500DFC32C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD505C22382D01500DFC32C /* Main.storyboard */; };
-		ABD505C62382D01600DFC32C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD505C52382D01600DFC32C /* Assets.xcassets */; };
-		ABD505C92382D01600DFC32C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD505C72382D01600DFC32C /* LaunchScreen.storyboard */; };
-		ABD505CC2382D01600DFC32C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD505CB2382D01600DFC32C /* main.m */; };
-		ABD505D62382D03700DFC32C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD505D32382D03700DFC32C /* Person.m */; };
-		ABD505D72382D03700DFC32C /* NSObject+CLKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD505D42382D03700DFC32C /* NSObject+CLKVC.m */; };
+		9450B76F23837CA800851614 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450B76E23837CA800851614 /* AppDelegate.m */; };
+		9450B77223837CA800851614 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450B77123837CA800851614 /* ViewController.m */; };
+		9450B77723837CA800851614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9450B77623837CA800851614 /* Assets.xcassets */; };
+		9450B77A23837CA800851614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9450B77823837CA800851614 /* LaunchScreen.storyboard */; };
+		9450B77D23837CA800851614 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450B77C23837CA800851614 /* main.m */; };
+		9450B78723837D4F00851614 /* NSObject+CLKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450B78523837D4F00851614 /* NSObject+CLKVC.m */; };
+		9450B78A23837D7600851614 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450B78923837D7600851614 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ABD505B62382D01500DFC32C /* KVCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABD505B92382D01500DFC32C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		ABD505BA2382D01500DFC32C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ABD505BC2382D01500DFC32C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		ABD505BD2382D01500DFC32C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		ABD505BF2382D01500DFC32C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ABD505C02382D01500DFC32C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		ABD505C32382D01500DFC32C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ABD505C52382D01600DFC32C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ABD505C82382D01600DFC32C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		ABD505CA2382D01600DFC32C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABD505CB2382D01600DFC32C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ABD505D22382D03700DFC32C /* NSObject+CLKVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CLKVC.h"; sourceTree = "<group>"; };
-		ABD505D32382D03700DFC32C /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		ABD505D42382D03700DFC32C /* NSObject+CLKVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CLKVC.m"; sourceTree = "<group>"; };
-		ABD505D52382D03700DFC32C /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		9450B76A23837CA800851614 /* KVCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9450B76D23837CA800851614 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9450B76E23837CA800851614 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9450B77023837CA800851614 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9450B77123837CA800851614 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9450B77623837CA800851614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9450B77923837CA800851614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9450B77B23837CA800851614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9450B77C23837CA800851614 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9450B78523837D4F00851614 /* NSObject+CLKVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CLKVC.m"; sourceTree = "<group>"; };
+		9450B78623837D4F00851614 /* NSObject+CLKVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CLKVC.h"; sourceTree = "<group>"; };
+		9450B78823837D7600851614 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		9450B78923837D7600851614 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ABD505B32382D01500DFC32C /* Frameworks */ = {
+		9450B76723837CA800851614 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,40 +43,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ABD505AD2382D01500DFC32C = {
+		9450B76123837CA800851614 = {
 			isa = PBXGroup;
 			children = (
-				ABD505B82382D01500DFC32C /* KVCDemo */,
-				ABD505B72382D01500DFC32C /* Products */,
+				9450B76C23837CA800851614 /* KVCDemo */,
+				9450B76B23837CA800851614 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ABD505B72382D01500DFC32C /* Products */ = {
+		9450B76B23837CA800851614 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABD505B62382D01500DFC32C /* KVCDemo.app */,
+				9450B76A23837CA800851614 /* KVCDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ABD505B82382D01500DFC32C /* KVCDemo */ = {
+		9450B76C23837CA800851614 /* KVCDemo */ = {
 			isa = PBXGroup;
 			children = (
-				ABD505D22382D03700DFC32C /* NSObject+CLKVC.h */,
-				ABD505D42382D03700DFC32C /* NSObject+CLKVC.m */,
-				ABD505D52382D03700DFC32C /* Person.h */,
-				ABD505D32382D03700DFC32C /* Person.m */,
-				ABD505B92382D01500DFC32C /* AppDelegate.h */,
-				ABD505BA2382D01500DFC32C /* AppDelegate.m */,
-				ABD505BC2382D01500DFC32C /* SceneDelegate.h */,
-				ABD505BD2382D01500DFC32C /* SceneDelegate.m */,
-				ABD505BF2382D01500DFC32C /* ViewController.h */,
-				ABD505C02382D01500DFC32C /* ViewController.m */,
-				ABD505C22382D01500DFC32C /* Main.storyboard */,
-				ABD505C52382D01600DFC32C /* Assets.xcassets */,
-				ABD505C72382D01600DFC32C /* LaunchScreen.storyboard */,
-				ABD505CA2382D01600DFC32C /* Info.plist */,
-				ABD505CB2382D01600DFC32C /* main.m */,
+				9450B76D23837CA800851614 /* AppDelegate.h */,
+				9450B76E23837CA800851614 /* AppDelegate.m */,
+				9450B77023837CA800851614 /* ViewController.h */,
+				9450B77123837CA800851614 /* ViewController.m */,
+				9450B78623837D4F00851614 /* NSObject+CLKVC.h */,
+				9450B78523837D4F00851614 /* NSObject+CLKVC.m */,
+				9450B78823837D7600851614 /* Person.h */,
+				9450B78923837D7600851614 /* Person.m */,
+				9450B77623837CA800851614 /* Assets.xcassets */,
+				9450B77823837CA800851614 /* LaunchScreen.storyboard */,
+				9450B77B23837CA800851614 /* Info.plist */,
+				9450B77C23837CA800851614 /* main.m */,
 			);
 			path = KVCDemo;
 			sourceTree = "<group>";
@@ -89,13 +81,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ABD505B52382D01500DFC32C /* KVCDemo */ = {
+		9450B76923837CA800851614 /* KVCDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABD505CF2382D01600DFC32C /* Build configuration list for PBXNativeTarget "KVCDemo" */;
+			buildConfigurationList = 9450B78023837CA800851614 /* Build configuration list for PBXNativeTarget "KVCDemo" */;
 			buildPhases = (
-				ABD505B22382D01500DFC32C /* Sources */,
-				ABD505B32382D01500DFC32C /* Frameworks */,
-				ABD505B42382D01500DFC32C /* Resources */,
+				9450B76623837CA800851614 /* Sources */,
+				9450B76723837CA800851614 /* Frameworks */,
+				9450B76823837CA800851614 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -103,24 +95,24 @@
 			);
 			name = KVCDemo;
 			productName = KVCDemo;
-			productReference = ABD505B62382D01500DFC32C /* KVCDemo.app */;
+			productReference = 9450B76A23837CA800851614 /* KVCDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ABD505AE2382D01500DFC32C /* Project object */ = {
+		9450B76223837CA800851614 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = langke;
 				TargetAttributes = {
-					ABD505B52382D01500DFC32C = {
-						CreatedOnToolsVersion = 11.2;
+					9450B76923837CA800851614 = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = ABD505B12382D01500DFC32C /* Build configuration list for PBXProject "KVCDemo" */;
+			buildConfigurationList = 9450B76523837CA800851614 /* Build configuration list for PBXProject "KVCDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -128,58 +120,48 @@
 				en,
 				Base,
 			);
-			mainGroup = ABD505AD2382D01500DFC32C;
-			productRefGroup = ABD505B72382D01500DFC32C /* Products */;
+			mainGroup = 9450B76123837CA800851614;
+			productRefGroup = 9450B76B23837CA800851614 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ABD505B52382D01500DFC32C /* KVCDemo */,
+				9450B76923837CA800851614 /* KVCDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ABD505B42382D01500DFC32C /* Resources */ = {
+		9450B76823837CA800851614 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABD505C92382D01600DFC32C /* LaunchScreen.storyboard in Resources */,
-				ABD505C62382D01600DFC32C /* Assets.xcassets in Resources */,
-				ABD505C42382D01500DFC32C /* Main.storyboard in Resources */,
+				9450B77A23837CA800851614 /* LaunchScreen.storyboard in Resources */,
+				9450B77723837CA800851614 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ABD505B22382D01500DFC32C /* Sources */ = {
+		9450B76623837CA800851614 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABD505C12382D01500DFC32C /* ViewController.m in Sources */,
-				ABD505BB2382D01500DFC32C /* AppDelegate.m in Sources */,
-				ABD505D62382D03700DFC32C /* Person.m in Sources */,
-				ABD505CC2382D01600DFC32C /* main.m in Sources */,
-				ABD505BE2382D01500DFC32C /* SceneDelegate.m in Sources */,
-				ABD505D72382D03700DFC32C /* NSObject+CLKVC.m in Sources */,
+				9450B77223837CA800851614 /* ViewController.m in Sources */,
+				9450B78723837D4F00851614 /* NSObject+CLKVC.m in Sources */,
+				9450B78A23837D7600851614 /* Person.m in Sources */,
+				9450B77D23837CA800851614 /* main.m in Sources */,
+				9450B76F23837CA800851614 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ABD505C22382D01500DFC32C /* Main.storyboard */ = {
+		9450B77823837CA800851614 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ABD505C32382D01500DFC32C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ABD505C72382D01600DFC32C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ABD505C82382D01600DFC32C /* Base */,
+				9450B77923837CA800851614 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -187,7 +169,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		ABD505CD2382D01600DFC32C /* Debug */ = {
+		9450B77E23837CA800851614 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -219,6 +201,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -237,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -245,7 +228,7 @@
 			};
 			name = Debug;
 		};
-		ABD505CE2382D01600DFC32C /* Release */ = {
+		9450B77F23837CA800851614 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,6 +260,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -289,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -297,60 +281,62 @@
 			};
 			name = Release;
 		};
-		ABD505D02382D01600DFC32C /* Debug */ = {
+		9450B78123837CA800851614 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KVCDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.unknown.KVCDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.world.KVCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		ABD505D12382D01600DFC32C /* Release */ = {
+		9450B78223837CA800851614 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KVCDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.unknown.KVCDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.world.KVCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ABD505B12382D01500DFC32C /* Build configuration list for PBXProject "KVCDemo" */ = {
+		9450B76523837CA800851614 /* Build configuration list for PBXProject "KVCDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ABD505CD2382D01600DFC32C /* Debug */,
-				ABD505CE2382D01600DFC32C /* Release */,
+				9450B77E23837CA800851614 /* Debug */,
+				9450B77F23837CA800851614 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABD505CF2382D01600DFC32C /* Build configuration list for PBXNativeTarget "KVCDemo" */ = {
+		9450B78023837CA800851614 /* Build configuration list for PBXNativeTarget "KVCDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ABD505D02382D01600DFC32C /* Debug */,
-				ABD505D12382D01600DFC32C /* Release */,
+				9450B78123837CA800851614 /* Debug */,
+				9450B78223837CA800851614 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ABD505AE2382D01500DFC32C /* Project object */;
+	rootObject = 9450B76223837CA800851614 /* Project object */;
 }

@@ -117,28 +117,31 @@
 	} else if ([ivarType hasPrefix:@"i"]) {
 		if (value == nil) {
 			[self setNilValueForKey:key];
+		} else {
+			int *intIvar = (int *)((uint8_t *)(__bridge void *)self + ivarOffset);
+			*intIvar = [value intValue];
 		}
-		CFTypeRef thisSelf = CFBridgingRetain(self);
-		int *intIvar = (int *)(thisSelf + ivarOffset);
-		*intIvar = [value intValue];
-		CFBridgingRelease((__bridge CFTypeRef _Nullable)(self));
 		// float type
 	} else if ([ivarType hasPrefix:@"f"]) {
 		if (value == nil) {
 			[self setNilValueForKey:key];
+		} else {
+			float *floatIvar = (float *)((uint8_t *)(__bridge void *)self + ivarOffset);
+			*floatIvar = [value floatValue];
 		}
-		float *floatIvar = (float *)((uint8_t *)(__bridge void *)self + ivarOffset);
-		*floatIvar = [value floatValue];
 		// double type
 	} else if ([ivarType hasPrefix:@"d"]) {
 		if (value == nil) {
 			[self setNilValueForKey:key];
+		} else {
+			CFTypeRef thisSelf = CFBridgingRetain(self);
+			double *doubleIvar = (double *)((uint8_t *)thisSelf + ivar_getOffset(ivar));
+			*doubleIvar = [value doubleValue];
+			CFBridgingRelease(thisSelf);
 		}
-		double *doubleIvar = (double *)((uint8_t *)(__bridge void *)self + ivarOffset);
-		*doubleIvar = [value doubleValue];
 		// other unresolved types
 	} else {
-		NSString *exceptionReason = [NSString stringWithFormat:@"ivar type is %@, but it is undefined. See the official website for more details: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html#//apple_ref/doc/uid/TP40008048-CH100-SW1", ivarType];
+		NSString *exceptionReason = [NSString stringWithFormat:@"The ivarType encoding type is %@, but it is undefined. See the official website for more details: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html#//apple_ref/doc/uid/TP40008048-CH100-SW1", ivarType];
 		NSException *exception = [NSException exceptionWithName: @"CL_KVC cl_setValue: forKey:"
 														 reason: exceptionReason
 													   userInfo: nil];
@@ -195,7 +198,7 @@
 		NSString *ivarKey = [NSString stringWithUTF8String:ivarName];
 		if ([ivarKey isEqualToString:_key]) {
 			free(ivars);
-			return [self valueWithIvar:ivar key:key];
+			return [self valueWithIvar:ivar];
 		}
 	}
 	
@@ -207,7 +210,7 @@
 		NSString *ivarKey = [NSString stringWithUTF8String:ivarName];
 		if ([ivarKey isEqualToString:_isKey]) {
 			free(ivars);
-			return [self valueWithIvar:ivar key:key];
+			return [self valueWithIvar:ivar];
 		}
 	}
 	
@@ -218,7 +221,7 @@
 		NSString *ivarKey = [NSString stringWithUTF8String:ivarName];
 		if ([ivarKey isEqualToString:key]) {
 			free(ivars);
-			return [self valueWithIvar:ivar key:key];
+			return [self valueWithIvar:ivar];
 		}
 	}
 	
@@ -230,7 +233,7 @@
 		NSString *ivarKey = [NSString stringWithUTF8String:ivarName];
 		if ([ivarKey isEqualToString:isKey]) {
 			free(ivars);
-			return [self valueWithIvar:ivar key:key];
+			return [self valueWithIvar:ivar];
 		}
 	}
 
@@ -238,7 +241,7 @@
 	return [self valueForUndefinedKey:key];
 }
 
-- (nullable id)valueWithIvar:(Ivar)ivar key:(NSString *)key
+- (nullable id)valueWithIvar:(Ivar)ivar
 {
 	const char *ivarEncodingType = ivar_getTypeEncoding(ivar);
 	NSString *ivarType = [NSString stringWithUTF8String:ivarEncodingType];
@@ -247,21 +250,21 @@
 	// object type
 	if ([ivarType hasPrefix:@"@"]) {
 		return object_getIvar(self, ivar);
-		// int type
+		// int type, return a NSNumber object
 	} else if ([ivarType hasPrefix:@"i"]) {
-		CFTypeRef thisSelf = CFBridgingRetain(self);
-		int intIvarValue = *(int *)(thisSelf + ivarOffset);
-		CFBridgingRelease((__bridge CFTypeRef _Nullable)(self));
-		return [NSNumber numberWithInt:intIvarValue];
-		// float type
+		int intValue = *(int *)((uint8_t *)(__bridge void *)(self) + ivarOffset);
+		return [NSNumber numberWithInt:intValue];
+		// float type, return a NSNumber object
 	} else if ([ivarType hasPrefix:@"f"]) {
-		float floatIvarValue = *(float *)((uint8_t *)(__bridge void *)self + ivarOffset);
-		return [NSNumber numberWithFloat:floatIvarValue];
-		// double type
+		float floatValue = *(float *)((uint8_t *)(__bridge void *)(self) + ivarOffset);
+		return [NSNumber numberWithFloat:floatValue];
+		// double type, return a NSNumber object
 	} else if ([ivarType hasPrefix:@"d"]) {
-		double doubleIvarValue = *(double *)((uint8_t *)(__bridge void *)self + ivarOffset);
-		return [NSNumber numberWithDouble:doubleIvarValue];
-		// other unresolved types
+		CFTypeRef thisSelf = CFBridgingRetain(self);
+		double doubleValue = *(double *)((uint8_t *)thisSelf + ivarOffset);
+		CFBridgingRelease(thisSelf);
+		return [NSNumber numberWithDouble:doubleValue];
+		// other unresolved data types
 	} else {
 		NSString *exceptionReason = [NSString stringWithFormat:@"ivar type is %@, but it is undefined. See the official website for more details: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html#//apple_ref/doc/uid/TP40008048-CH100-SW1", ivarType];
 		NSException *exception = [NSException exceptionWithName: @"CL_KVC cl_valueForKey: forKey:"
