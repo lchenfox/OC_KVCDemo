@@ -183,6 +183,26 @@
 	if ([self respondsToSelector:keySEL]) {
 		return [self performSelector:keySEL];
 	}
+    // isKey
+    NSString *is_Key = [NSString stringWithFormat:@"is%@", key.capitalizedString];
+    SEL isKeySEL = NSSelectorFromString(is_Key);
+    if ([self respondsToSelector:isKeySEL]) {
+        return [self performSelector:isKeySEL];
+    }
+    
+    // _getKey
+    NSString *_getKey = [NSString stringWithFormat:@"_get%@", key.capitalizedString];
+    SEL _getKeySEL = NSSelectorFromString(_getKey);
+    if ([self respondsToSelector:_getKeySEL]) {
+        return [self performSelector:_getKeySEL];
+    }
+    
+    // _key
+    NSString *underlineKey = [NSString stringWithFormat:@"_%@", key];
+    SEL _keySEL = NSSelectorFromString(underlineKey);
+    if ([self respondsToSelector:_keySEL]) {
+        return [self performSelector:_keySEL];
+    }
 	
 	// getIsKey
 	NSString *getIsKey = [NSString stringWithFormat:@"getIs%@", key.capitalizedString];
@@ -191,7 +211,7 @@
 		return [self performSelector:getIsKeySEL];
 	}
 	#pragma clang diagnostic pop
-	
+
 	// access instance variable method to check. If NO, throw an exception.
 	if (![[self class] accessInstanceVariablesDirectly]) {
 		NSException *exception = [NSException exceptionWithName:@"CL KVC"
